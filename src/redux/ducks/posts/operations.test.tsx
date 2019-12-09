@@ -1,11 +1,13 @@
 import * as types from './types';
 import {getUserPostsAsync} from "./operations";
 import axios from 'axios';
+import {Dispatch} from "redux";
 
 jest.mock('axios');
+const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('get posts  async function', () => {
-    let dispatchFn;
+    let dispatchFn: Dispatch;
     let userId = 1;
 
     beforeEach(() => {
@@ -13,7 +15,7 @@ describe('get posts  async function', () => {
     });
 
     it('should check if function works without userID', () => {
-        getUserPostsAsync()(dispatchFn);
+        getUserPostsAsync(null)(dispatchFn);
         expect(dispatchFn).not.toHaveBeenCalled();
     });
 
@@ -22,7 +24,7 @@ describe('get posts  async function', () => {
     });
 
     it('should handle REQUEST_POSTS', () => {
-        axios.get.mockResolvedValue({
+        mockedAxios.get.mockResolvedValue({
             data: []
         });
         getUserPostsAsync(userId)(dispatchFn);
@@ -31,7 +33,7 @@ describe('get posts  async function', () => {
 
     it('should handle RESPONSE_POSTS_SUCCESS', async () => {
         const mockData = ['123'];
-        axios.get.mockResolvedValue({
+        mockedAxios.get.mockResolvedValue({
             data: [...mockData]
         });
         await getUserPostsAsync(userId)(dispatchFn);

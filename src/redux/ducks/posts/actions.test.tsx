@@ -1,5 +1,6 @@
 import {requestPosts, responsePostsSuccess, responsePostsFailure} from './actions'
 import * as types from './types'
+import {PostsData} from "../types";
 
 describe('posts', () => {
     it('should create an action to request posts list', () => {
@@ -8,7 +9,7 @@ describe('posts', () => {
         })
     });
 
-    let posts = [];
+    let posts: PostsData[] = [];
     let error = 'some text';
 
     it('should create an action to receive posts list', () => {

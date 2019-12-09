@@ -2,17 +2,16 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Icon from '../icon/filter.svg';
 import {usersOperations} from "../redux/ducks/users";
-// @ts-ignore
 import {connect} from 'react-redux';
+// import {AnyAction, Dispatch} from 'redux';
 import '../style/main.css';
-import {selectors} from "../redux/ducks/users";
 import Indicator  from './LoadingIndicator'
+import {FriendsData, State, UsersData} from "../redux/ducks/types";
+import {getFriendsSelector, getIsFetchingSelector, getRowsSelector} from "../redux/ducks/users";
 
-// export interface Props {
-//     getUsers:
-// }
+type UsersTableProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
 
-export class UsersTable extends Component {
+export class UsersTable extends Component<UsersTableProps, {}> {
     componentDidMount() {
         this.props.getUsers();
     }
@@ -59,18 +58,28 @@ export class UsersTable extends Component {
 
 
 
-const mapStateToProps = (state) => {
+interface StateToProps {
+    users: UsersData[];
+    friends: FriendsData[];
+    isFetching: boolean
+}
+
+interface DispatchToProps {
+    getUsers: () => void
+}
+
+const mapStateToProps = (state: any): StateToProps => {
     return {
-        users: selectors.getRowsSelector(state),
-        friends: selectors.getFriendsSelector(state),
-        isFetching: selectors.getIsFetchingSelector(state)
+        users: getRowsSelector(state),
+        friends: getFriendsSelector(state),
+        isFetching: getIsFetchingSelector(state)
     }
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: any): DispatchToProps => {
     return {
         getUsers: () => dispatch(usersOperations.getUsersAsync())
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersTable);
+export default connect<StateToProps, DispatchToProps>(mapStateToProps, mapDispatchToProps)(UsersTable);

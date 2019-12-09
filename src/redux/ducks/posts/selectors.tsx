@@ -1,7 +1,8 @@
 import {createSelector} from "reselect";
+import {State} from "../types";
 
-const getIsFetching = (state) => state.posts.fetching;
-const getRows = (state) => state.posts.rows;
+const getIsFetching = (state: State) => state.posts.fetching;
+const getRows = (state: State) => state.posts.rows;
 
 export const getIsFetchingSelector = createSelector(
     getIsFetching,

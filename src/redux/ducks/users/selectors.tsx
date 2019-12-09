@@ -1,19 +1,20 @@
 import {createSelector} from 'reselect'
-import { combineSelectors } from 'combine-selectors-redux'
+// import { combineSelectors } from 'combine-selectors-redux';
+import {State, Users} from "../types";
 
-const getRowsFromState = (state) => state.users.rows;
+const getRowsFromState = (state: State) => state.users.rows;
 
-const getIsFetching = (state) => state.users.fetching;
+const getIsFetching = (state: State) => state.users.fetching;
 
-const getRowsSelector = createSelector(
+export const getRowsSelector = createSelector(
     getRowsFromState,
     users => users,
 );
 
-const getFriendsSelector = createSelector(
+export const getFriendsSelector = createSelector(
     getRowsFromState,
     users => {
-        const hashMap = {};
+        const hashMap: any = {};
         users.map(
             user => {
                 hashMap[user.id] = user.friends.map(friend => friend.name);
@@ -23,13 +24,7 @@ const getFriendsSelector = createSelector(
     }
 );
 
-const getIsFetchingSelector = createSelector(
+export const getIsFetchingSelector = createSelector(
     getIsFetching,
     fetching => fetching
 );
-
-export const selectors = combineSelectors({
-    getRowsSelector,
-    getFriendsSelector,
-    getIsFetchingSelector
-});

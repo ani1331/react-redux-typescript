@@ -4,12 +4,13 @@ import postsReducer from "./ducks/posts/reducers";
 import commentsReducer from "./ducks/comments/reducers";
 import { connectRouter } from 'connected-react-router'
 
-
-const createRootReducer = (history) => combineReducers({
+const createRootReducer = (history: any) => combineReducers({
     router: connectRouter(history),
     users: usersReducer,
     posts: postsReducer,
     comments: commentsReducer
 });
+
+// export type RootState = ReturnType<typeof createRootReducer>
 
 export default createRootReducer

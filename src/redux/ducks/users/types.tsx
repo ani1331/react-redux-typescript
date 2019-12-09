@@ -1,4 +1,4 @@
-import {Users} from "../types";
+import {UsersData} from "../types";
 
 export const RESPONSE_USERS_SUCCESS = 'ducks/users/RESPONSE_USERS_SUCCESS';
 export const REQUEST_USERS = 'ducks/users/REQUEST_USERS';
@@ -11,7 +11,7 @@ interface RequestUsers {
 
 interface ResponseUsersSuccess {
     type: typeof RESPONSE_USERS_SUCCESS;
-    users: Users
+    users: UsersData[]
 }
 
 interface ResponseUsersFailure {

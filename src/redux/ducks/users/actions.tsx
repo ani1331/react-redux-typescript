@@ -1,5 +1,5 @@
 import * as types from './types';
-import {Users} from '../types'
+import {UsersData} from '../types'
 import {ReducerActions} from "./types";
 
 
@@ -9,7 +9,7 @@ export function requestUsers(): ReducerActions {
     }
 }
 
-export function responseUsersSuccess(users: Users): ReducerActions {
+export function responseUsersSuccess(users: UsersData[]): ReducerActions {
     return {
         type: types.RESPONSE_USERS_SUCCESS,
         users

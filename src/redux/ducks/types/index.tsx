@@ -1,14 +1,7 @@
 export interface FriendsData {
     id: number;
     name: string
-}
-
-export interface Friends {
-    [index: number]: FriendsData
-}
-
-export interface Tags {
-    [index: number]: string
+    join(s: string): any;
 }
 
 export interface UsersData {
@@ -29,19 +22,15 @@ export interface UsersData {
     "registered": string,
     "latitude": number,
     "longitude": number,
-    tags: Tags[],
-    friends: Friends,
+    tags: string[],
+    friends: FriendsData[],
     "greeting": string,
     "favoriteFruit": string
 }
 
-export interface RowsUsers {
-    [index: number]: UsersData
-}
-
 export interface Users {
     fetching: boolean;
-    rows: RowsUsers
+    rows: UsersData[]
 }
 ///////////////////////////////
 
@@ -52,13 +41,9 @@ export interface PostsData {
     body: string
 }
 
-export interface RowsPosts {
-    [index: number]: PostsData
-}
-
 export interface Posts {
     fetching: boolean;
-    rows: RowsPosts
+    rows: PostsData[]
 }
 
 ////////////////////////////////
@@ -71,13 +56,9 @@ export interface CommentsData {
     body: string
 }
 
-export interface RowsComments {
-    [index: number]: CommentsData
-}
-
 export interface Comments {
     fetching: boolean;
-    rows: RowsComments
+    rows: CommentsData[]
 }
 
 ////////////////////////////////////

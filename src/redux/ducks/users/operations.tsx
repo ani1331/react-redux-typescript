@@ -1,7 +1,8 @@
 import axios from "axios";
+import {Dispatch} from 'redux';
 import {requestUsers, responseUsersSuccess, responseUsersFailure} from './actions'
 
-export const getUsersAsync = () => dispatch => {
+export const getUsersAsync = () => (dispatch: Dispatch) => {
     const usersApiUrl = 'http://localhost:3000/users.json';
     dispatch(requestUsers());
     return axios.get(usersApiUrl)

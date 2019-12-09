@@ -1,7 +1,8 @@
 import {requestPosts, responsePostsSuccess, responsePostsFailure} from './actions'
 import axios from "axios";
+import {Dispatch} from "redux";
 
-export const getUserPostsAsync = (userId) => (dispatch) => {
+export const getUserPostsAsync = (userId: number | null) => (dispatch: Dispatch) => {
     if (userId) {
         const postsApiUrl = 'https://jsonplaceholder.typicode.com/posts?userId=';
         dispatch(requestPosts());

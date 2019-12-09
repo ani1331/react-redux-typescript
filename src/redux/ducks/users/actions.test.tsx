@@ -1,5 +1,6 @@
 import {requestUsers, responseUsersSuccess, responseUsersFailure} from './actions'
-import * as types from './types'
+import * as types from './types';
+import {UsersData} from "../types";
 
 describe('actions', () => {
     it('should create an action to request users list', () => {
@@ -8,7 +9,7 @@ describe('actions', () => {
         })
     });
 
-    let users = [];
+    let users: UsersData[] = [];
     let error = 'some text';
 
     it('should create an action to receive users list', () => {

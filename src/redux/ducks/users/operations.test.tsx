@@ -1,13 +1,13 @@
 import * as types from "./types";
 import { getUsersAsync } from './operations';
-import {requestUsers, responseUsersSuccess, responseUsersFailure} from './actions'
-
+import {Dispatch} from 'redux';
 import axios from "axios";
 
 jest.mock("axios");
+const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('users async function', () => {
-    let dispatchFn;
+    let dispatchFn: Dispatch;
 
     beforeEach(() => {
         dispatchFn = jest.fn();
@@ -18,7 +18,7 @@ describe('users async function', () => {
     });
 
     it('should handle REQUESTING_USERS_LIST', () => {
-        axios.get.mockResolvedValue({
+        mockedAxios.get.mockResolvedValue({
             data: []
         });
         getUsersAsync()(dispatchFn);
@@ -27,7 +27,7 @@ describe('users async function', () => {
 
     it('should handle RECEIVE_USERS_LIST', async () => {
         const mockData = ['123'];
-        axios.get.mockResolvedValue({
+        mockedAxios.get.mockResolvedValue({
             data: [...mockData]
         });
         await getUsersAsync()(dispatchFn);
