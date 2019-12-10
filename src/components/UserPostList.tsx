@@ -4,9 +4,13 @@ import {postsOperations} from "../redux/ducks/posts";
 import {connect} from "react-redux";
 import Indicator  from './LoadingIndicator';
 import {getPostsSelector, getIsFetchingSelector} from '../redux/ducks/posts/selectors'
+import { PostsData } from "../redux/ducks/types";
 
-class PostList extends Component {
+type UsersPostListTableProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
+
+class PostList extends Component<UsersPostListTableProps, {}> {
     componentDidMount() {
+        // @ts-ignore
         this.props.getUserPosts(this.props.match.params.userId);
     }
 
@@ -44,17 +48,26 @@ class PostList extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
+interface StateToProps {
+    posts: PostsData[];
+    isFetching: boolean
+}
+
+interface DispatchToProps {
+    getUserPosts: (userId: number) => void
+}
+
+const mapStateToProps = (state: any): StateToProps => {
     return {
         posts: getPostsSelector(state),
         isFetching: getIsFetchingSelector(state)
     }
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: any): DispatchToProps => {
     return {
         getUserPosts: (userId) => dispatch(postsOperations.getUserPostsAsync(userId))
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostList);
+export default connect<StateToProps, DispatchToProps>(mapStateToProps, mapDispatchToProps)(PostList);

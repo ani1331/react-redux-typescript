@@ -1,3 +1,4 @@
+// import * as types from "./types";
 import {Users} from "../types";
 import {ReducerActions, REQUEST_USERS, RESPONSE_USERS_SUCCESS} from "./types";
 
@@ -7,7 +8,7 @@ const initialState: Users = {
 };
 
 
-const usersReducer = (state = initialState, action: ReducerActions): Users => {
+const usersReducer = (state = initialState, action: ReducerActions): Users=> {
     switch (action.type) {
         case REQUEST_USERS:
             return {

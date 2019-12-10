@@ -1,36 +1,40 @@
 export interface FriendsData {
     id: number;
     name: string
-    join(s: string): any;
+    // join(s: string): any;
 }
 
-export interface UsersData {
+export interface UsedData {
     id: number,
+    name: string,
+    email: string,
+    address: string,
+    friends?: FriendsData[],
+}
+
+export interface UsersData extends UsedData{
     guid: string,
     isActive: boolean,
     balance: string,
-    "picture": string,
-    "age": number,
-    "eyeColor": string,
-    "name": string,
-    "gender": string,
-    "company": string,
-    "email": string,
-    "phone": string,
-    "address": string,
-    "about": string,
-    "registered": string,
-    "latitude": number,
-    "longitude": number,
+    picture: string,
+    age: number,
+    eyeColor: string,
+    gender: string,
+    company: string,
+    phone: string,
+    about: string,
+    registered: string,
+    latitude: number,
+    longitude: number,
     tags: string[],
-    friends: FriendsData[],
-    "greeting": string,
-    "favoriteFruit": string
+    greeting: string,
+    favoriteFruit: string
 }
+
 
 export interface Users {
     fetching: boolean;
-    rows: UsersData[]
+    rows: UsedData[]
 }
 ///////////////////////////////
 
@@ -64,7 +68,7 @@ export interface Comments {
 ////////////////////////////////////
 
 export interface State {
-    // router: null;
+    // router: any;
     users: Users;
     posts: Posts;
     comments: Comments

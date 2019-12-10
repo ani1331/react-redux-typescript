@@ -1,7 +1,8 @@
 import axios from "axios";
 import {requestComments, responseCommentsSuccess, responseCommentsFailure} from "./actions";
+import {Dispatch} from "redux";
 
-export const getPostCommentsAsync = (postId) => (dispatch) => {
+export const getPostCommentsAsync = (postId: number | null) => (dispatch: Dispatch) => {
     if (postId) {
         const commentsApiUrl = 'https://jsonplaceholder.typicode.com/comments?postId=';
         dispatch(requestComments());

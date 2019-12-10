@@ -2,11 +2,13 @@ import * as types from './types';
 import {getPostCommentsAsync} from "./operations";
 // @ts-ignore
 import axios from 'axios';
+import {Dispatch} from "redux";
 
 jest.mock('axios');
+const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('get comments  async function', () => {
-    let dispatchFn;
+    let dispatchFn: Dispatch;
     let postId = 1;
 
     beforeEach(() => {
@@ -14,16 +16,16 @@ describe('get comments  async function', () => {
     });
 
     it('should check if function works without postID', () => {
-        getPostCommentsAsync()(dispatchFn);
+        getPostCommentsAsync(null)(dispatchFn);
         expect(dispatchFn).not.toHaveBeenCalled();
     });
 
     it('should return callback function', () => {
-        expect(typeof getPostCommentsAsync()).toBe('function');
+        expect(typeof getPostCommentsAsync(null)).toBe('function');
     });
 
     it('should handle REQUEST_COMMENTS', () => {
-        axios.get.mockResolvedValue({
+        mockedAxios.get.mockResolvedValue({
             data: []
         });
         getPostCommentsAsync(postId)(dispatchFn);
@@ -32,7 +34,7 @@ describe('get comments  async function', () => {
 
     it('should handle RESPONSE_COMMENTS_SUCCESS', async () => {
         const mockData = ['123'];
-        axios.get.mockResolvedValue({
+        mockedAxios.get.mockResolvedValue({
             data: [...mockData]
         });
         await getPostCommentsAsync(postId)(dispatchFn);

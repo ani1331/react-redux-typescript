@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 // import {AnyAction, Dispatch} from 'redux';
 import '../style/main.css';
 import Indicator  from './LoadingIndicator'
-import {FriendsData, State, UsersData} from "../redux/ducks/types";
+import {FriendsData, UsedData} from "../redux/ducks/types";
 import {getFriendsSelector, getIsFetchingSelector, getRowsSelector} from "../redux/ducks/users";
 
 type UsersTableProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
@@ -46,6 +46,7 @@ export class UsersTable extends Component<UsersTableProps, {}> {
                             </td>
                             <td>{user.email}</td>
                             <td>{user.address}</td>
+                            //@ts-ignore
                             <td>{this.props.friends[user.id].join(', ')}</td>
                         </tr>
                     ))}
@@ -59,7 +60,7 @@ export class UsersTable extends Component<UsersTableProps, {}> {
 
 
 interface StateToProps {
-    users: UsersData[];
+    users: UsedData[];
     friends: FriendsData[];
     isFetching: boolean
 }

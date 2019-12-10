@@ -3,9 +3,13 @@ import {commentsOperations} from "../redux/ducks/comments";
 import {connect} from "react-redux";
 import Indicator  from './LoadingIndicator';
 import {getCommentsSelector, getIsFetchingSelector} from '../redux/ducks/comments/selectors'
+import {CommentsData} from "../redux/ducks/types";
 
-class CommentList extends Component {
+type PostCommentListTableProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
+
+class CommentList extends Component<PostCommentListTableProps, {}> {
     componentDidMount() {
+        // @ts-ignore
         this.props.getCommentList(this.props.match.params.postId);
     }
 
@@ -43,17 +47,26 @@ class CommentList extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
+interface StateToProps {
+    comments: CommentsData[];
+    isFetching: boolean
+}
+
+interface DispatchToProps {
+    getCommentList: (postId: number) => void
+}
+
+const mapStateToProps = (state: any): StateToProps => {
     return {
         comments: getCommentsSelector(state),
         isFetching: getIsFetchingSelector(state)
     }
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: any): DispatchToProps => {
     return {
         getCommentList: (postId) => dispatch(commentsOperations.getPostCommentsAsync(postId))
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommentList);
+export default connect<StateToProps, DispatchToProps>(mapStateToProps, mapDispatchToProps)(CommentList);

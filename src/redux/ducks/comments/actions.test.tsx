@@ -1,5 +1,6 @@
 import {requestComments, responseCommentsSuccess, responseCommentsFailure} from "./actions";
 import * as types from './types'
+import {CommentsData} from "../types";
 
 describe('comments', () => {
     it('should create an action to request comments list', () => {
@@ -8,7 +9,7 @@ describe('comments', () => {
         })
     });
 
-    let comments = [];
+    let comments: CommentsData[] = [];
     let error = 'some text';
 
     it('should create an action to receive comments list', () => {

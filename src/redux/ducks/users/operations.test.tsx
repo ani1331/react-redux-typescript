@@ -1,7 +1,7 @@
-import * as types from "./types";
 import { getUsersAsync } from './operations';
 import {Dispatch} from 'redux';
 import axios from "axios";
+import {REQUEST_USERS, RESPONSE_USERS_SUCCESS} from "./types";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
@@ -22,7 +22,7 @@ describe('users async function', () => {
             data: []
         });
         getUsersAsync()(dispatchFn);
-        expect(dispatchFn).toHaveBeenCalledWith({type:types.REQUEST_USERS})
+        expect(dispatchFn).toHaveBeenCalledWith({type: REQUEST_USERS})
     });
 
     it('should handle RECEIVE_USERS_LIST', async () => {
@@ -33,7 +33,7 @@ describe('users async function', () => {
         await getUsersAsync()(dispatchFn);
 
         expect(dispatchFn).toHaveBeenLastCalledWith(
-            {type: types.RESPONSE_USERS_SUCCESS, users: mockData}
+            {type: RESPONSE_USERS_SUCCESS, users: mockData}
         )
     })
 });

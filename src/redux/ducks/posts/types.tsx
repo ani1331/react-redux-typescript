@@ -1,4 +1,5 @@
 import {PostsData} from "../types";
+import {NOTHING} from "../users/types";
 
 export const REQUEST_POSTS = 'ducks/posts/REQUEST_POSTS';
 export const RESPONSE_POSTS_SUCCESS = 'ducks/posts/RESPONSE_POSTS_SUCCESS';
@@ -18,4 +19,8 @@ interface ResponsePostsFailure {
     error: any
 }
 
-export type PostReducerActions = RequestPosts | ResponsePostsSuccess | ResponsePostsFailure;
+interface Empty {
+    type: typeof NOTHING;
+}
+
+export type PostReducerActions = RequestPosts | ResponsePostsSuccess | ResponsePostsFailure | Empty;

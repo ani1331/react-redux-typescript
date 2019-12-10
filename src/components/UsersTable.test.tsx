@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, configure, mount } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { UsersTable } from './UsersTable';
 import Indicator  from './LoadingIndicator';
@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 
 describe('users table', () => {
     const getUsersFn = jest.fn();
-    let wrapper;
+    let wrapper: any;
     const users = [{
         "id": 1,
         "name": "Valeria Merrill",
@@ -16,12 +16,17 @@ describe('users table', () => {
         "address": "435 Flatbush Avenue, Calverton, Idaho, 8077"
     }];
 
+    const friends = [{
+        id: 1,
+        name: "name",
+    }];
+
     beforeEach(() => {
         wrapper = shallow(<UsersTable
             isFetching={false}
             users={users}
             getUsers={getUsersFn}
-            friends={{1:["Carlson Brooks", "Pugh Garrett", "Hawkins Pace"]}}
+            friends={friends}
         />);
     });
 

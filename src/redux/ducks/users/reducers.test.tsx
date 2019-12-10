@@ -1,33 +1,46 @@
 import usersReducer from './reducers';
-import * as types from './types';
+import {NOTHING, REQUEST_USERS, RESPONSE_USERS_SUCCESS} from "./types";
 
 describe('users reducer', () => {
     it('should return the initial state', () => {
-        expect(usersReducer(undefined, {})).toEqual({
-            'fetching': true,
-            'rows': []
+        expect(usersReducer(undefined, {type: NOTHING})).toEqual({
+            fetching: true,
+            rows: []
         })
     });
 
     it('should handle REQUESTING_USERS_LIST', () => {
-        const requestingUsers = {
-            type: types.REQUEST_USERS
-        };
         expect(usersReducer({
             fetching: false,
-            rows: [1, 2]
-        }, requestingUsers)).toEqual({
-            'fetching': true,
-            "rows": []
+            rows: []
+        }, {type: REQUEST_USERS})).toEqual({
+            fetching: true,
+            rows: []
         });
     });
 
     it('should handle RECEIVE_USERS_LIST', () => {
-        const action = {type: types.RESPONSE_USERS_SUCCESS};
+        const usersReceivedData = {
+            id: 1,
+            name: "name",
+            email: "email",
+            address: "address",
+            friends: [{id: 1, name: "name"}]
+        };
+
+        const action = {type: RESPONSE_USERS_SUCCESS, users: usersReceivedData};
+
+        const requestingUsers = {
+            fetching: true,
+            rows: []
+        };
+
         const receivedState = {
             fetching: false,
             rows: action.users
         };
-        expect(usersReducer(undefined, action)).toEqual(receivedState);
+
+        // @ts-ignore
+        expect(usersReducer(requestingUsers, action)).toEqual(receivedState);
     });
 });

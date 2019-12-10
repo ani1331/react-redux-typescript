@@ -1,18 +1,20 @@
-import * as types from "./types";
+// import * as types from "./types";
+import {CommentsReducerActions, REQUEST_COMMENTS, RESPONSE_COMMENTS_SUCCESS} from "./types";
+import {Comments} from "../types";
 
 const initialState = {
     fetching: true,
     rows: []
 };
 
-const commentsReducer = (state = initialState, action) => {
+const commentsReducer = (state = initialState, action: CommentsReducerActions): Comments => {
     switch (action.type) {
-        case types.REQUEST_COMMENTS:
+        case REQUEST_COMMENTS:
             return {
                 fetching: true,
                 rows: []
             };
-        case types.RESPONSE_COMMENTS_SUCCESS:
+        case RESPONSE_COMMENTS_SUCCESS:
             return {
                 fetching: false,
                 rows: action.comments
