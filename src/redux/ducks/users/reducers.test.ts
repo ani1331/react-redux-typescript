@@ -1,9 +1,9 @@
 import usersReducer from './reducers';
-import {NOTHING, REQUEST_USERS, RESPONSE_USERS_SUCCESS} from "./types";
+import {EMPTY_OBJECT, REQUEST_USERS, RESPONSE_USERS_SUCCESS} from "./types";
 
 describe('users reducer', () => {
     it('should return the initial state', () => {
-        expect(usersReducer(undefined, {type: NOTHING})).toEqual({
+        expect(usersReducer(undefined, {type: EMPTY_OBJECT})).toEqual({
             fetching: true,
             rows: []
         })

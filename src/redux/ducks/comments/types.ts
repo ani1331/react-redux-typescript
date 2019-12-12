@@ -1,5 +1,5 @@
 import {CommentsData} from "../types";
-import {NOTHING} from "../users/types";
+import {EMPTY_OBJECT} from "../users/types";
 
 export const REQUEST_COMMENTS = 'ducks/comments/RECEIVE_COMMENT_LIST';
 export const RESPONSE_COMMENTS_SUCCESS = 'ducks/posts/RESPONSE_COMMENTS_SUCCESS';
@@ -21,7 +21,7 @@ interface ResponseCommentsFailure {
 }
 
 interface Empty {
-    type: typeof NOTHING;
+    type: typeof EMPTY_OBJECT;
 }
 
 export type CommentsReducerActions = RequestComments | ResponseCommentsSuccess | ResponseCommentsFailure | Empty;

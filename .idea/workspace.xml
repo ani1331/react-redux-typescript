@@ -3,30 +3,34 @@
   <component name="ChangeListManager">
     <list default="true" id="371e04d8-981d-4d5c-b4d2-d165f62eb337" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostCommentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPostList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPostList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/configureStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/configureStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/actions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/actions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/actions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/operations.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/operations.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/operations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/operations.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/selectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/selectors.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/types/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/operations.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/operations.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/reducers.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/reducers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/selectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/selectors.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/actions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/actions.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/operations.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/operations.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/operations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/operations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/selectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/actions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/actions.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/operations.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/operations.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/operations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/operations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/selectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/actions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/actions.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/operations.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/operations.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/operations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/operations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/reducers.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/reducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/selectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +117,7 @@
       <workItem from="1575466984351" duration="3000" />
       <workItem from="1575527118789" duration="14543000" />
       <workItem from="1575615027025" duration="33581000" />
+      <workItem from="1575988145917" duration="7096000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-import * as types from "./types";
+// import * as types from "./types";
 import {PostReducerActions, REQUEST_POSTS, RESPONSE_POSTS_SUCCESS} from "./types";
 import {Posts} from "../types";
 

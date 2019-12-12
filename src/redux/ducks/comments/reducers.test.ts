@@ -1,12 +1,12 @@
 import * as types from './types';
 import commentsReducer from './reducers'
-import {NOTHING} from "../users/types";
+import {EMPTY_OBJECT} from "../users/types";
 import {RESPONSE_POSTS_SUCCESS} from "../posts/types";
 import postsReducer from "../posts";
 
 describe('comments reducer', () => {
     it('should return initial state as default', () => {
-        expect(commentsReducer(undefined, {type: NOTHING})).toEqual({
+        expect(commentsReducer(undefined, {type: EMPTY_OBJECT})).toEqual({
             fetching: true,
             rows: []
         })

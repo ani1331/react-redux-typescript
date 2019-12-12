@@ -1,11 +1,11 @@
-import * as types from './types';
+// import * as types from './types';
 import postsReducer from './reducers'
 import {REQUEST_POSTS, RESPONSE_POSTS_SUCCESS} from "./types";
-import {NOTHING} from "../users/types";
+import {EMPTY_OBJECT} from "../users/types";
 
 describe('posts reducer', () => {
     it('should return initial state as default', () => {
-        expect(postsReducer(undefined, {type: NOTHING})).toEqual({
+        expect(postsReducer(undefined, {type: EMPTY_OBJECT})).toEqual({
             fetching: true,
             rows: []
         })
