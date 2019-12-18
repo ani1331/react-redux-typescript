@@ -3,36 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="371e04d8-981d-4d5c-b4d2-d165f62eb337" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/actions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/actions.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/operations.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/operations.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/operations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/operations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/selectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/comments/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/comments/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/actions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/actions.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/operations.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/operations.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/operations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/operations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/selectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/posts/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/posts/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/actions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/actions.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/operations.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/operations.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/operations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/operations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/reducers.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/reducers.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/selectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoadingIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoadingIndicator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPostList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPostList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UsersTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ducks/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/types/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.ts" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +32,11 @@
   <component name="ProjectId" id="1UWAiNX17PaNcOPykKYMrFEm3g8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -76,18 +60,6 @@
       <recent name="$PROJECT_DIR$/src/icon" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -102,6 +74,18 @@
       <envs />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -118,11 +102,43 @@
       <workItem from="1575527118789" duration="14543000" />
       <workItem from="1575615027025" duration="33581000" />
       <workItem from="1575988145917" duration="7096000" />
+      <workItem from="1576146370812" duration="755000" />
+      <workItem from="1576478027088" duration="1863000" />
+      <workItem from="1576667595296" duration="57000" />
+      <workItem from="1576667727830" duration="5719000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/redux/ducks/comments/types.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/users/reducers.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/users/types.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/comments/actions.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/comments/operations.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/comments/index.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/comments/selectors.js" />
+        <option value="$PROJECT_DIR$/src/serviceWorker.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/posts/actions.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/posts/operations.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/posts/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/posts/selectors.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/users/actions.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/users/operations.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/users/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/users/selectors.js" />
+        <option value="$PROJECT_DIR$/src/routes/AppRouter.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/posts/reducers.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/posts/types.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/types/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/configureStore.js" />
+        <option value="$PROJECT_DIR$/src/redux/rootReducer.js" />
+        <option value="$PROJECT_DIR$/src/redux/ducks/comments/reducers.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -136,5 +152,35 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom" timestamp="1576673748869">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1576673748869" />
+    <state width="1659" height="295" key="GridCell.Tab.0.center" timestamp="1576673748867">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1576673748867" />
+    <state width="1659" height="295" key="GridCell.Tab.0.left" timestamp="1576673748866">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1576673748866" />
+    <state width="1659" height="295" key="GridCell.Tab.0.right" timestamp="1576673748868">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1576673748868" />
+    <state x="634" y="243" key="RollbackChangesDialog" timestamp="1576673697295">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="634" y="243" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1576673697295" />
+    <state x="506" y="287" width="667" height="476" key="find.popup" timestamp="1576673797962">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="506" y="287" width="667" height="476" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1576673797962" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1576674125789">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1576674125789" />
   </component>
 </project>

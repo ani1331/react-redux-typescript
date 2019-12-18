@@ -10,8 +10,7 @@ type UsersPostListTableProps = ReturnType<typeof mapStateToProps> & ReturnType<t
 
 class PostList extends Component<UsersPostListTableProps, {}> {
     componentDidMount() {
-        // @ts-ignore
-        this.props.getUserPosts(this.props.match.params.userId);
+        this.props.getUserPosts(+this.props.userId);
     }
 
     render() {
@@ -50,17 +49,19 @@ class PostList extends Component<UsersPostListTableProps, {}> {
 
 interface StateToProps {
     posts: PostsData[];
-    isFetching: boolean
+    isFetching: boolean;
+    userId: string;
 }
 
 interface DispatchToProps {
     getUserPosts: (userId: number) => void
 }
 
-const mapStateToProps = (state: any): StateToProps => {
+const mapStateToProps = (state: any, ownProps: any): StateToProps => {
     return {
         posts: getPostsSelector(state),
-        isFetching: getIsFetchingSelector(state)
+        isFetching: getIsFetchingSelector(state),
+        userId: ownProps.match.params.userId
     }
 };
 

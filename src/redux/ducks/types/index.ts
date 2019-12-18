@@ -1,7 +1,6 @@
 export interface FriendsData {
     id: number;
     name: string
-    // join(s: string): any;
 }
 
 export interface UsedData {
@@ -68,7 +67,7 @@ export interface Comments {
 ////////////////////////////////////
 
 export interface State {
-    // router: any;
+    router: any;
     users: Users;
     posts: Posts;
     comments: Comments

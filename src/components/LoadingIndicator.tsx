@@ -1,4 +1,4 @@
-import styles from "../style/indicator.module.css";
+import styles from "../styles/indicator.module.css";
 import React, {Component} from 'react';
 
 
