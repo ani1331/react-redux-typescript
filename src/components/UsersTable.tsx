@@ -14,6 +14,7 @@ type UsersTableProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof ma
 export class UsersTable extends Component<UsersTableProps, {}> {
     componentDidMount() {
         this.props.getUsers();
+        console.log(this.props)
     }
 
     render() {
@@ -41,7 +42,9 @@ export class UsersTable extends Component<UsersTableProps, {}> {
                     {this.props.users.map(user => (
                         <tr className="columns" key={user.id}>
                             <td>
-                                <img className="ml-1" alt="icon" src={Icon}/>
+                                <Link to={`/albums/${user.id}`}>
+                                    <img className="ml-1" alt="icon" src={Icon}/>
+                                </Link>
                                 <Link to={`/posts/${user.id}`}>{user.name}</Link>
                             </td>
                             <td>{user.email}</td>

@@ -66,9 +66,38 @@ export interface Comments {
 
 ////////////////////////////////////
 
+export interface AlbumsData {
+    userId: number,
+    id: number,
+    title: string
+}
+
+export interface Albums  {
+    fetching: boolean;
+    rows: AlbumsData[]
+}
+
+///////////////////////////////////
+
+export interface PhotosData {
+    albumId: number,
+    id: number,
+    title: string,
+    url: string,
+    thumbnailUrl: string
+}
+
+export interface Photos {
+    fetching: boolean;
+    rows: PhotosData[]
+}
+///////////////////////////////////
+
 export interface State {
     router: any;
     users: Users;
     posts: Posts;
-    comments: Comments
+    comments: Comments;
+    albums: Albums
+    photos: Photos
 }
