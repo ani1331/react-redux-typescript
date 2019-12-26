@@ -19,6 +19,8 @@ function UserPhotos(props: any) {
         dispatch(photosOperations.getPhotosAsync(albumId));
     }, [albumId]);
 
+    console.log(photos);
+
     if (isFetching) {
         return (<Indicator/>);
     }

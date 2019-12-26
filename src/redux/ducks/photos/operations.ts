@@ -4,7 +4,8 @@ import {Dispatch} from "redux";
 
 export const getPhotosAsync = (albumId: number | null) => (dispatch: Dispatch) => {
     if (albumId) {
-        const PhotosApiUrl = 'https://jsonplaceholder.typicode.com/albums?userId=';
+        debugger;
+        const PhotosApiUrl = 'https://jsonplaceholder.typicode.com/photos?albumId=';
         dispatch(requestPhotos());
         return axios.get(`${PhotosApiUrl}${albumId}`)
             .then(response => response.data)

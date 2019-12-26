@@ -9,8 +9,8 @@ type PostCommentListTableProps = ReturnType<typeof mapStateToProps> & ReturnType
 
 class CommentList extends Component<PostCommentListTableProps, {}> {
     componentDidMount() {
-        // @ts-ignore
-        this.props.getCommentList(this.props.match.params.postId);
+
+        this.props.getCommentList(+this.props.postId);
     }
 
     render() {
@@ -49,17 +49,19 @@ class CommentList extends Component<PostCommentListTableProps, {}> {
 
 interface StateToProps {
     comments: CommentsData[];
-    isFetching: boolean
+    isFetching: boolean;
+    postId: number
 }
 
 interface DispatchToProps {
     getCommentList: (postId: number) => void
 }
 
-const mapStateToProps = (state: any): StateToProps => {
+const mapStateToProps = (state: any, ownProps: any): StateToProps => {
     return {
         comments: getCommentsSelector(state),
-        isFetching: getIsFetchingSelector(state)
+        isFetching: getIsFetchingSelector(state),
+        postId: ownProps.match.params.postId
     }
 };
 

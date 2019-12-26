@@ -14,7 +14,6 @@ type UsersTableProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof ma
 export class UsersTable extends Component<UsersTableProps, {}> {
     componentDidMount() {
         this.props.getUsers();
-        console.log(this.props)
     }
 
     render() {
@@ -49,7 +48,7 @@ export class UsersTable extends Component<UsersTableProps, {}> {
                             </td>
                             <td>{user.email}</td>
                             <td>{user.address}</td>
-                            <td>{this.props.friends[user.id].join(', ')}</td>
+                            <td>{this.props.friends.join(', ')}</td>
                         </tr>
                     ))}
                     </tbody>
@@ -63,9 +62,7 @@ export class UsersTable extends Component<UsersTableProps, {}> {
 
 interface StateToProps {
     users: UsedData[];
-    friends: {
-        [key: string]: FriendsData[]
-    };
+    friends: FriendsData[];
     isFetching: boolean
 }
 
