@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="371e04d8-981d-4d5c-b4d2-d165f62eb337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostCommentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPhotos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPhotos.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/photos/operations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/photos/operations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ducks/users/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ducks/users/selectors.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +105,8 @@
       <workItem from="1576667595296" duration="57000" />
       <workItem from="1576667727830" duration="6079000" />
       <workItem from="1576743282625" duration="19967000" />
-      <workItem from="1577358179913" duration="3736000" />
+      <workItem from="1577358179913" duration="4572000" />
+      <workItem from="1577427462405" duration="350000" />
     </task>
     <servers />
   </component>
@@ -252,10 +247,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="634" y="243" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1576756614823" />
-    <state x="100" y="85" width="1480" height="943" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576844149564">
+    <state x="100" y="4" width="1480" height="1046" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1577427539150">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
-    <state x="100" y="85" width="1480" height="943" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.947@0.23.1680.947" timestamp="1576844149564" />
+    <state x="100" y="4" width="1480" height="1046" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.947@0.23.1680.947" timestamp="1577427539150" />
     <state x="506" y="287" width="667" height="476" key="find.popup" timestamp="1576673797962">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
