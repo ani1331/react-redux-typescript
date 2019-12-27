@@ -1,6 +1,4 @@
-// import * as types from './types';
 import postsReducer from './reducers'
-import {REQUEST_POSTS, RESPONSE_POSTS_SUCCESS} from "./types";
 import {EMPTY_OBJECT} from "../users/types";
 
 describe('posts reducer', () => {
@@ -15,32 +13,31 @@ describe('posts reducer', () => {
         expect(postsReducer({
             fetching: false,
             rows: []
-        }, { type: REQUEST_POSTS })).toEqual({
+        }, { type: 'ducks/posts/RESPONSE_POSTS_SUCCESS' })).toEqual({
             fetching: true,
             rows: []
         })
     });
 
     it('should receive posts list', () => {
-        const postsReceivedData = {
+        const postsReceivedData = [{
             userId: 1,
             id: 1,
             title: "title",
             body: "body"
-        };
+        }];
 
         const requestingPosts = {
             fetching: true,
             rows: []
         };
 
-        const action =  {type: RESPONSE_POSTS_SUCCESS, posts: postsReceivedData};
+        const action =  {type: 'ducks/posts/RESPONSE_POSTS_SUCCESS', posts: postsReceivedData};
 
         const receivedState = {
             fetching: false,
             rows: action.posts
         };
 
-        // @ts-ignore
         expect(postsReducer(requestingPosts, action)).toEqual(receivedState)});
 });

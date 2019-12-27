@@ -1,13 +1,12 @@
-// import * as types from "./types"
-import {AlbumsReducerActions, REQUEST_ALBUMS, RESPONSE_ALBUMS_SUCCESS } from "./types";
+import {IFetchingAlbums, REQUEST_ALBUMS, RESPONSE_ALBUMS_SUCCESS } from "./types";
 import {Albums} from "../types";
 
-const initialState = {
+const initialState: Albums = {
     fetching: true,
     rows: []
 };
 
-const albumsReducer = (state = initialState, action: AlbumsReducerActions): Albums => {
+const albumsReducer = (state = initialState, action: IFetchingAlbums): Albums => {
     switch (action.type) {
         case REQUEST_ALBUMS:
             return {
@@ -15,7 +14,7 @@ const albumsReducer = (state = initialState, action: AlbumsReducerActions): Albu
                 rows: []
             };
         case RESPONSE_ALBUMS_SUCCESS:
-            return {
+            return <Albums>{
                 fetching: false,
                 rows: action.albums
             };

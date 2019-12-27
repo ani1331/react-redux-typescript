@@ -16,6 +16,7 @@ export class UsersTable extends Component<UsersTableProps, {}> {
         this.props.getUsers();
     }
 
+
     render() {
         if (this.props.isFetching) {
             return ( <Indicator/> );
@@ -48,7 +49,7 @@ export class UsersTable extends Component<UsersTableProps, {}> {
                             </td>
                             <td>{user.email}</td>
                             <td>{user.address}</td>
-                            <td>{this.props.friends.join(', ')}</td>
+                            <td>{(this.props.friends[user.id] || []).join(", ")}</td>
                         </tr>
                     ))}
                     </tbody>
@@ -62,7 +63,9 @@ export class UsersTable extends Component<UsersTableProps, {}> {
 
 interface StateToProps {
     users: UsedData[];
-    friends: FriendsData[];
+    friends: {
+        [key: number]: FriendsData[];
+    }
     isFetching: boolean
 }
 

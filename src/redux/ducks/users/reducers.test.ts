@@ -40,7 +40,6 @@ describe('users reducer', () => {
             rows: action.users
         };
 
-        // @ts-ignore
         expect(usersReducer(requestingUsers, action)).toEqual(receivedState);
     });
 });

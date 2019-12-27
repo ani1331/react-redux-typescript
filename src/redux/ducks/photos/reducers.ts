@@ -1,14 +1,12 @@
-// import * as types from "./types";
-// @ts-ignore
-import {PhotosReducerActions, REQUEST_PHOTOS, RESPONSE_PHOTOS_SUCCESS} from "./types";
+import {IFetchingPhotos, REQUEST_PHOTOS, RESPONSE_PHOTOS_SUCCESS} from "./types";
 import {Photos} from "../types";
 
-const initialState = {
+const initialState: Photos = {
     fetching: true,
     rows: []
 };
 
-const photosReducer = (state = initialState, action: PhotosReducerActions): Photos => {
+const photosReducer = (state = initialState, action: IFetchingPhotos): Photos => {
     switch (action.type) {
         case REQUEST_PHOTOS:
             return {
@@ -16,7 +14,7 @@ const photosReducer = (state = initialState, action: PhotosReducerActions): Phot
                 rows: []
             };
         case RESPONSE_PHOTOS_SUCCESS:
-            return {
+            return <Photos>{
                 fetching: false,
                 rows: action.photos
             };
