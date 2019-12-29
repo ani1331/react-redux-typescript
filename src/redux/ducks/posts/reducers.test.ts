@@ -13,7 +13,7 @@ describe('posts reducer', () => {
         expect(postsReducer({
             fetching: false,
             rows: []
-        }, { type: 'ducks/posts/RESPONSE_POSTS_SUCCESS' })).toEqual({
+        }, { type: 'ducks/posts/REQUEST_POSTS' })).toEqual({
             fetching: true,
             rows: []
         })

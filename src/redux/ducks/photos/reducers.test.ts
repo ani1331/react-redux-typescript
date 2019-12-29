@@ -1,7 +1,5 @@
-import * as types from './types';
 import photosReducer from './reducers'
 import {EMPTY_OBJECT} from "../users/types";
-import {REQUEST_PHOTOS, RESPONSE_PHOTOS_SUCCESS} from "./types";
 
 describe('photos reducer', () => {
     it('should return initial state as default', () => {
@@ -15,7 +13,7 @@ describe('photos reducer', () => {
         expect(photosReducer({
             fetching: false,
             rows: []
-        }, { type: REQUEST_PHOTOS })).toEqual({
+        }, { type: 'ducks/photos/RECEIVE_PHOTOS_LIST' })).toEqual({
             fetching: true,
             rows: []
         })
@@ -24,20 +22,20 @@ describe('photos reducer', () => {
     it('should receive user photos', () => {
 
 
-        const photosReceivedData = {
+        const photosReceivedData = [{
             "albumId": 1,
             "id": 1,
             "title": "accusamus beatae ad facilis cum similique qui sunt",
             "url": "https://via.placeholder.com/600/92c952",
             "thumbnailUrl": "https://via.placeholder.com/150/92c952"
-        };
+        }];
 
         const requestingPhotos = {
             fetching: true,
             rows: []
         };
 
-        const action =  {type: RESPONSE_PHOTOS_SUCCESS, photos: photosReceivedData};
+        const action =  {type: 'ducks/photos/RESPONSE_PHOTOS_SUCCESS', photos: photosReceivedData};
 
         expect(photosReducer(requestingPhotos, action)).toEqual({
             fetching: false,

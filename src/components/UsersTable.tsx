@@ -16,7 +16,6 @@ export class UsersTable extends Component<UsersTableProps, {}> {
         this.props.getUsers();
     }
 
-
     render() {
         if (this.props.isFetching) {
             return ( <Indicator/> );
@@ -58,8 +57,6 @@ export class UsersTable extends Component<UsersTableProps, {}> {
         )
     }
 }
-
-
 
 interface StateToProps {
     users: UsedData[];

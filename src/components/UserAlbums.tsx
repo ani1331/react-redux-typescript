@@ -7,12 +7,8 @@ import '../styles/cards-gallery.css';
 import {selectors} from '../redux/ducks/albums'
 import {AlbumsData} from "../redux/ducks/types";
 
-// type UsersAlbumsProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
 
 function UserAlbums(props: any) {
-    // componentDidMount() {
-    //     this.props.getUserAlbums(this.props.match.params.userId);
-    // }
     const isFetching: boolean = useSelector(selectors.getIsFetchingSelector);
     const albums: AlbumsData[] = useSelector(selectors.getAlbumsSelector);
     const userId = props.match.params.userId;
@@ -53,32 +49,5 @@ function UserAlbums(props: any) {
         </div>
     );
 }
-
-// interface StateToProps {
-//     albums: AlbumsData[];
-//     isFetching: boolean;
-//     // userId: string;
-// }
-
-// interface DispatchToProps {
-//     getUserAlbums: (userId: number) => void
-// }
-
-//
-// const mapStateToProps = (state: any, ownProps: any): StateToProps => {
-//     return {
-//         albums: selectors.getAlbumsSelector(state),
-//         isFetching: selectors.getIsFetchingSelector(state),
-//         // userId: ownProps.match.params.userId
-//     }
-// };
-
-// const mapDispatchToProps = (dispatch: any): DispatchToProps => {
-//     return {
-//         getUserAlbums: (userId) => dispatch(albumsOperations.getUserAlbumsAsync(userId)),
-//     }
-// };
-
-// export default connect<StateToProps, DispatchToProps>(mapStateToProps, mapDispatchToProps)(UserAlbums);
 
 export default UserAlbums;

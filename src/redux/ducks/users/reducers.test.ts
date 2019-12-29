@@ -13,22 +13,22 @@ describe('users reducer', () => {
         expect(usersReducer({
             fetching: false,
             rows: []
-        }, {type: REQUEST_USERS})).toEqual({
+        }, {type: 'ducks/users/REQUEST_USERS'})).toEqual({
             fetching: true,
             rows: []
         });
     });
 
     it('should handle RECEIVE_USERS_LIST', () => {
-        const usersReceivedData = {
+        const usersReceivedData = [{
             id: 1,
             name: "name",
             email: "email",
             address: "address",
             friends: [{id: 1, name: "name"}]
-        };
+        }];
 
-        const action = {type: RESPONSE_USERS_SUCCESS, users: usersReceivedData};
+        const action = {type: "ducks/users/RESPONSE_USERS_SUCCESS", users: usersReceivedData};
 
         const requestingUsers = {
             fetching: true,

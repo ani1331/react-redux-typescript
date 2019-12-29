@@ -16,10 +16,10 @@ describe('users table', () => {
         "address": "435 Flatbush Avenue, Calverton, Idaho, 8077"
     }];
 
-    const friends = [{
+    const friends = { 1: [{
         id: 1,
         name: "name",
-    }];
+    }]};
 
     beforeEach(() => {
         wrapper = shallow(<UsersTable
