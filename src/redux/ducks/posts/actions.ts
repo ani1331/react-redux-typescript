@@ -1,23 +1,22 @@
-import * as types from "./types";
-import {PostReducerActions} from "./types";
+import {REQUEST_POSTS, RESPONSE_POSTS_SUCCESS, RESPONSE_POSTS_FAILURE, IFetchingPosts} from "./types";
 import {PostsData} from "../types";
 
-export function requestPosts(): PostReducerActions {
+export function requestPosts(): IFetchingPosts {
     return {
-        type: types.REQUEST_POSTS
+        type: REQUEST_POSTS,
     }
 }
 
-export function responsePostsSuccess(posts: PostsData[]): PostReducerActions {
+export function responsePostsSuccess(posts: PostsData[]): IFetchingPosts {
     return {
-        type: types.RESPONSE_POSTS_SUCCESS,
+        type: RESPONSE_POSTS_SUCCESS,
         posts
     }
 }
 
-export function responsePostsFailure(error: any): PostReducerActions{
+export function responsePostsFailure(error: any): IFetchingPosts{
     return {
-        type: types.RESPONSE_POSTS_FAILURE,
+        type: RESPONSE_POSTS_FAILURE,
         error
     }
 }

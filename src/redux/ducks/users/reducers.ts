@@ -1,6 +1,5 @@
-// import * as types from "./types";
 import {Users} from "../types";
-import {ReducerActions, REQUEST_USERS, RESPONSE_USERS_SUCCESS} from "./types";
+import {IFetchingUsers, REQUEST_USERS, RESPONSE_USERS_SUCCESS} from "./types";
 
 const initialState: Users = {
     fetching: true,
@@ -8,7 +7,7 @@ const initialState: Users = {
 };
 
 
-const usersReducer = (state = initialState, action: ReducerActions): Users=> {
+const usersReducer = (state = initialState, action: IFetchingUsers): Users=> {
     switch (action.type) {
         case REQUEST_USERS:
             return {
@@ -16,7 +15,7 @@ const usersReducer = (state = initialState, action: ReducerActions): Users=> {
                 rows: []
             };
         case RESPONSE_USERS_SUCCESS:
-            return {
+            return <Users>{
                 fetching: false,
                 rows: action.users
             };

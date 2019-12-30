@@ -7,7 +7,6 @@ import {History} from 'history';
 import albumsReducer from "./ducks/albums";
 import photosReducer from "./ducks/photos";
 
-//@ts-ignore
 const createRootReducer = (history: History) => combineReducers({
     router: connectRouter(history),
     users: usersReducer,

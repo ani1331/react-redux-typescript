@@ -1,6 +1,5 @@
 import * as types from './types';
 import {getPostCommentsAsync} from "./operations";
-// @ts-ignore
 import axios from 'axios';
 import {Dispatch} from "redux";
 

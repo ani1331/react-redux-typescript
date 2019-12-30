@@ -1,6 +1,5 @@
 import {createSelector} from 'reselect'
-// import { combineSelectors } from 'combine-selectors-redux';
-import {State} from "../types/index";
+import {State} from "../types";
 
 const getRowsFromState = (state: State) => state.users.rows;
 
@@ -17,8 +16,7 @@ export const getFriendsSelector = createSelector(
         const hashMap: any = {};
         users.map(
             user => {
-                // @ts-ignore
-                hashMap[user.id] = user.friends.map(friend => friend.name);
+                hashMap[user.id] = (user.friends || []).map(friend => friend.name);
             }
         );
         return hashMap;

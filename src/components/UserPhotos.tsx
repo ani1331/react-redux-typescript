@@ -6,10 +6,6 @@ import {selectors} from '../redux/ducks/photos'
 import {PhotosData} from "../redux/ducks/types";
 
 function UserPhotos(props: any) {
-    // componentDidMount() {
-    //     this.props.getPhotosList(this.props.match.params.albumId);
-    // }
-
     const isFetching: boolean = useSelector(selectors.getIsFetchingSelector);
     const photos: PhotosData[] = useSelector(selectors.getPhotosSelector);
     const albumId = props.match.params.albumId;
@@ -34,20 +30,5 @@ function UserPhotos(props: any) {
         </div>
     );
 }
-
-// const mapStateToProps = (state) => {
-//     return {
-//         photos: selectors.getPhotosSelector(state),
-//         isFetching: selectors.getIsFetchingSelector(state)
-//     }
-// };
-//
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         getPhotosList: (albumId) => dispatch(photosOperations.getPhotosAsync(albumId))
-//     }
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(UserPhotos);
 
 export default UserPhotos;

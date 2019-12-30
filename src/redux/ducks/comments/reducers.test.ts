@@ -1,8 +1,5 @@
-import * as types from './types';
 import commentsReducer from './reducers'
 import {EMPTY_OBJECT} from "../users/types";
-import {RESPONSE_POSTS_SUCCESS} from "../posts/types";
-import postsReducer from "../posts";
 
 describe('comments reducer', () => {
     it('should return initial state as default', () => {
@@ -16,34 +13,33 @@ describe('comments reducer', () => {
         expect(commentsReducer({
             fetching: false,
             rows: []
-        }, {type: types.REQUEST_COMMENTS})).toEqual({
+        }, {type: 'ducks/comments/REQUEST_COMMENTS_LIST'})).toEqual({
             fetching: true,
             rows: []
         })
     });
 
     it('should receive comments list', () => {
-        const commentsReceivedData = {
+        const commentsReceivedData = [{
             postId: 1,
             id: 1,
             name: "title",
             email: "email",
             body: "body"
-        };
+        }];
 
         const requestingComments = {
             fetching: true,
             rows: []
         };
 
-        const action = {type: RESPONSE_POSTS_SUCCESS, comments: commentsReceivedData};
+            const action = {type: 'ducks/posts/RESPONSE_COMMENTS_SUCCESS', comments: commentsReceivedData};
 
         const receivedState = {
-            fetching: false,
-            rows: action.comments
+                    fetching: false,
+                    rows: action.comments
         };
 
-        // @ts-ignore
-        expect(postsReducer(requestingComments, action)).toEqual(receivedState)
+        expect(commentsReducer(requestingComments, action)).toEqual(receivedState)
     });
 });
